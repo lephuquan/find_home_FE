@@ -1,0 +1,39 @@
+.heading {
+  &__container {
+    text-align: center;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0;
+      position: relative;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        background: var(--primary-color);
+        width: 65px;
+      }
+    }
+    p {
+      margin: 16px auto;
+      width: 60%;
+      font-size: 14px;
+    }
+  }
+  .heading__container.text-start {
+    h2 {
+      margin-bottom: 16px;
+      &::before {
+        content: "";
+        left: 0;
+        transform: translateX(0);
+      }
+    }
+  }
+}
